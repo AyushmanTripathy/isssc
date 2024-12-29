@@ -1,9 +1,11 @@
+<section id="particles-js"></section>
+
 <main>
   <div>
     <h1>
       3rd IEEE International Symposium on Sustainable Energy, Signal Processing
-      and Cyber Security 
-      <br>
+      and Cyber Security
+      <br />
       (iSSSC 2025)
     </h1>
   </div>
@@ -15,7 +17,6 @@
     @include flex(column);
     @include flex-center;
     @include fixed(0, 0);
-    @include cover("images/campus-view.jpg");
     @include sans;
   }
   div {
@@ -23,5 +24,20 @@
     text-align: center;
     width: 60vw;
     min-width: 300px;
+    color: $pri;
+  }
+
+  #particles-js {
+    @include fixed(0, 0);
+    @include fullscreen;
+    z-index: -1;
+    background: $sec;
   }
 </style>
+
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+<script>
+  particlesJS.load("particles-js", "particle.json", () => {
+    console.log();
+  });
+</script>
