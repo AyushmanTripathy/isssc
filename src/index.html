@@ -1,0 +1,32 @@
+<import path="./sections/navbar.html" />
+<main>
+  <section></section>
+  <import path="./sections/aboutisssc.html" />
+  <import path="./sections/aboutgietu.html" />
+  <import path="./sections/tracks.html" />
+  <import path="./sections/papers.html" />
+  <import path="./sections/fees.html" />
+  <import path="./sections/dates.html" />
+  <import path="./sections/footer.html" />
+</main>
+
+<import path="./sections/home.html" />
+
+<style>
+  main {
+    @include no-padding-margin;
+    @include flex(column);
+    @include sans;
+    @include absolute;
+
+    align-items: center;
+    width: 100vw;
+    z-index: 10;
+    color: $pri;
+  }
+
+  section {
+    @include fullscreen;
+    background: transparent;
+  }
+</style>

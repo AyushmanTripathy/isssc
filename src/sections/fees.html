@@ -1,0 +1,39 @@
+<main>
+  <h1 data-aos="flip-down">Registration Fees</h1>
+  <section data-aos="flip-up">
+    <p class="table-heading">Category</p>
+    <p class="table-heading">IEEE Members</p>
+    <p class="table-heading">Non-IEEE Members</p>
+    <p>Research Scholars UG and PG Students</p>
+    <p>2,500 INR</p>
+    <p>3,000 INR</p>
+    <p>Academicians</p>
+    <p>3,500 INR</p>
+    <p>4,000 INR</p>
+    <p>Industry</p>
+    <p>7,000 INR</p>
+    <p>8,000 INR</p>
+    <p>Foreign Student Participants</p>
+    <p>USD 200</p>
+    <p>USD 250</p>
+    <p>Foreign Academicians</p>
+    <p>USD 300</p>
+    <p>USD 350</p>
+  </section>
+</main>
+
+<style>
+  main {
+    @include section;
+    @include flex(column);
+    @include flex-center;
+    @include dark;
+  }
+  section {
+    @include grid(repeat(3, 1fr), repeat(4, 1fr));
+    column-gap: 20px;
+  }
+  .table-heading {
+    border-bottom: 1px solid $sec;
+  }
+</style>

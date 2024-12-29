@@ -1,0 +1,33 @@
+<main>
+  <h1 data-aos="zoom-in-left">Call For Papers!</h1>
+  <a
+    data-aos="zoom-in-right"
+    href="https://cmt3.research.microsoft.com/isssc2022"
+    >Submit your papers</a
+  >
+</main>
+
+<style>
+  main {
+    @include section;
+    @include light;
+    @include flex(column);
+    @include flex-center;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    min-height: 30vh;
+  }
+  a {
+    color: $pri;
+    padding: 10px;
+    border: 3px solid $pri;
+    text-decoration: none;
+    transition: all 1s;
+    border-radius: 10px;
+  }
+  a:hover {
+    background-color: $pri;
+    color: $sec;
+  }
+</style>
