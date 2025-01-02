@@ -7,3 +7,8 @@ dialog::backdrop {
   background: black;
   opacity: 0.4;
 }
+
+img {
+  transition: transform 1s;
+  width: 100vw;
+}
