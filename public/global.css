@@ -9,6 +9,38 @@ dialog::backdrop {
 }
 
 img {
-  transition: transform 1s;
+  transition: transform 1.5s;
   width: 100vw;
+}
+
+.fade-in-left,
+.fade-in-right,
+.fade-in {
+  opacity: 0;
+  transition: transform 2s, opacity 2s;
+}
+
+.fade-in {
+}
+
+.fade-in.anim {
+  opacity: 1;
+}
+
+.fade-in-left {
+  transform: translateX(-100%);
+}
+
+.fade-in-left.anim {
+  opacity: 1;
+  transform: none;
+}
+
+.fade-in-right {
+  transform: translateX(100%);
+}
+
+.fade-in-right.anim {
+  opacity: 1;
+  transform: none;
 }
