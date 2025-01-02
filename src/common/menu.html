@@ -1,0 +1,57 @@
+<div id="menuBtn">
+  <import path="../icons/menu.svg" type="svg" fill="#fcffc1" />
+</div>
+
+<dialog>
+  <import path="../icons/close.svg" type="svg" id="closeBtn" fill="#fcffc1" />
+  <import path="./links.html" />
+</dialog>
+
+<style>
+  dialog[open] {
+    @include flex(column);
+    @include dark;
+    @include sans;
+    @include shadow;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+
+    gap: 20px;
+    font-size: large;
+  }
+
+  p {
+    text-align: right;
+  }
+
+  div {
+    @include shadow;
+    position: fixed;
+    bottom: 30px;
+    left: 85vw;
+
+    z-index: 1000;
+    background-color: $pri;
+    padding: 10px;
+    border-radius: 50%;
+    border: 5px solid $sec;
+
+    @media (min-width: 1000px) {
+      display: none;
+    }
+  }
+  svg:hover {
+    cursor: pointer;
+  }
+</style>
+
+<script>
+  const dialog = document.querySelector("dialog");
+  document.getElementById("menuBtn").onclick = () => {
+    dialog.showModal();
+  };
+  document.getElementById("closeBtn").onclick = () => {
+    dialog.close();
+  };
+</script>
