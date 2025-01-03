@@ -86,3 +86,14 @@ $sec: #fcffc1;
     fill: $hl;
   }
 }
+@mixin page {
+  @include no-padding-margin;
+  @include flex(column);
+  @include sans;
+  @include absolute;
+
+  align-items: center;
+  width: 100vw;
+  overflow: hidden;
+  color: $pri;
+}

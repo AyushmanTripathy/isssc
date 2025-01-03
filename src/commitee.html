@@ -1,0 +1,64 @@
+<import path="./common/navbar.html" />
+<import path="./common/menu.html" />
+
+<main>
+  <import path="./commitee/dropdown.html" name="Chief Patrons" />
+  <import path="./commitee/chiefpatrons.html" />
+  <import path="./commitee/dropdown.html" name="Patrons" />
+  <import path="./commitee/patrons.html" />
+  <import path="./commitee/dropdown.html" name="Chairs" />
+  <import path="./commitee/chair.html" />
+  <import path="./commitee/dropdown.html" name="Organizing Commitee" />
+  <import path="./commitee/organizing.html" />
+  <import path="./commitee/dropdown.html" name="National Advisory Board" />
+  <import path="./commitee/national.html" />
+  <import path="./commitee/dropdown.html" name="International Advisory Board" />
+  <import path="./commitee/international.html" />
+  <import path="./commitee/dropdown.html" name="Technical Program Committee" />
+  <import path="./commitee/technical.html" />
+  <import path="./commitee/dropdown.html" name="Local Advisory Committee" />
+  <import path="./commitee/local.html" />
+  <import path="./commitee/dropdown.html" name="Steering Committee" />
+  <import path="./commitee/steering.html" />
+  <import path="./commitee/dropdown.html" name="Industrial Liaison" />
+  <import path="./commitee/industrial.html" />
+  <import path="./commitee/dropdown.html" name="Women in Engineering" />
+  <import path="./commitee/women.html" />
+</main>
+
+<style>
+  main {
+    @include page;
+    @include flex(column);
+    @include light;
+    min-height: 100vh;
+    margin-top: 10vh;
+  }
+</style>
+
+<script>
+  const dropdowns = document.querySelectorAll(".commitee");
+  const dropbuttons = document.querySelectorAll(".commitee-drop");
+
+  const showDropDown = (index) => {
+    dropbuttons[index].classList.remove("dropped");
+    return () => {
+      dropdowns.forEach((x) => x.classList.remove("commitee-dropped"));
+      dropdowns[index].classList.add("commitee-dropped");
+      for (let i = 0; i < dropdowns.length; i++) {
+        if (i != index) dropbuttons[i].onclick = showDropDown(i);
+      }
+      dropbuttons[index].onclick = hideDropDown(index);
+    };
+  };
+  const hideDropDown = (index) => {
+    dropbuttons[index].classList.add("dropped");
+    return () => {
+      dropdowns[index].classList.remove("commitee-dropped");
+      dropbuttons[index].onclick = showDropDown(index);
+    };
+  };
+  for (let i = 0; i < dropbuttons.length; i++) {
+    dropbuttons[i].onclick = showDropDown(i);
+  }
+</script>

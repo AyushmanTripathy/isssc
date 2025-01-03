@@ -1,0 +1,32 @@
+<div class="commitee-drop">
+  <h2>${name}</h2>
+  <button>
+    <import path="../icons/arrow.svg" type="svg" />
+  </button>
+</div>
+
+<style>
+  div {
+    @include flex(row);
+    justify-content: space-between;
+    width: 85vw;
+    padding-left: 2.5vw;
+    padding-right: 2.5vw;
+    transition: color 1s, background 1s;
+  }
+  button {
+    @include light;
+    outline: none;
+    border: none;
+    fill: $pri;
+    transition: color 1s, background 1s;
+  }
+  .dropped {
+    @include dark;
+    button {
+      @include dark;
+      transform: rotate(180deg);
+      fill: $sec;
+    }
+  }
+</style>

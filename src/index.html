@@ -2,29 +2,21 @@
 <import path="./common/menu.html" />
 <main>
   <section></section>
-  <import path="./sections/aboutisssc.html" />
-  <import path="./sections/aboutgietu.html" />
-  <import path="./sections/tracks.html" />
-  <import path="./sections/papers.html" />
-  <import path="./sections/fees.html" />
-  <import path="./sections/dates.html" />
-  <import path="./sections/footer.html" />
+  <import path="./index/aboutisssc.html" />
+  <import path="./index/aboutgietu.html" />
+  <import path="./index/tracks.html" />
+  <import path="./index/papers.html" />
+  <import path="./index/fees.html" />
+  <import path="./index/dates.html" />
+  <import path="./index/footer.html" />
 </main>
 
-<import path="./sections/home.html" />
+<import path="./index/home.html" />
 
 <style>
   main {
-    @include no-padding-margin;
-    @include flex(column);
-    @include sans;
-    @include absolute;
-
-    align-items: center;
-    width: 100vw;
-    overflow: hidden;
+    @include page;
     z-index: 10;
-    color: $pri;
   }
 
   section {

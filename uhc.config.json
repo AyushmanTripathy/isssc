@@ -12,6 +12,7 @@
   "vars": {
   },
   "routes": {
-    "/": "index.html"
+    "/": "index.html",
+    "/commitee": "commitee.html"
   }
 }

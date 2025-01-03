@@ -14,7 +14,6 @@ const names = [
 ];
 names.forEach((name) => {
   document.querySelectorAll("." + name).forEach((x) => {
-    console.log(x);
     observer.observe(x);
   });
 });
