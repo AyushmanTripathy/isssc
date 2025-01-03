@@ -19,7 +19,9 @@ img {
 .flip-up,
 .flip-down {
   opacity: 0;
-  transition: transform 1.5s, opacity 1.5s;
+  transition:
+    transform 1.5s,
+    opacity 1.5s;
 }
 
 .fade-in-left {
@@ -34,11 +36,22 @@ img {
   transform: rotateX(90deg);
 }
 
-.flip-up  {
+.flip-up {
   transform: rotateX(90deg);
 }
 
 .anim {
   opacity: 1;
   transform: none;
+}
+
+@media (prefers-reduced-motion) {
+  .fade-in-left,
+  .fade-in-right,
+  .fade-in,
+  .flip-up,
+  .flip-down {
+    opacity: 1;
+    transform: none;
+  }
 }

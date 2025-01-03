@@ -37,6 +37,7 @@
     display: inline-flex;
     height: 100vh;
     z-index: -1;
+    overflow: hidden;
   }
 </style>
 
@@ -57,7 +58,7 @@
   }
   async function slideLeft() {
     images[1].src = nextImageSrc();
-    await sleep(1000);
+    await sleep(2000);
 
     images[0].style.transform = "translateX(-100%)";
     images[1].style.transform = "translateX(-100%)";
@@ -67,7 +68,7 @@
   }
   async function slideRight() {
     images[0].src = nextImageSrc();
-    await sleep(1000);
+    await sleep(2000);
 
     images[0].style.transform = "";
     images[1].style.transform = "";
