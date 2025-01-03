@@ -15,32 +15,30 @@ img {
 
 .fade-in-left,
 .fade-in-right,
-.fade-in {
+.fade-in,
+.flip-up,
+.flip-down {
   opacity: 0;
-  transition: transform 2s, opacity 2s;
-}
-
-.fade-in {
-}
-
-.fade-in.anim {
-  opacity: 1;
+  transition: transform 1.5s, opacity 1.5s;
 }
 
 .fade-in-left {
   transform: translateX(-100%);
 }
 
-.fade-in-left.anim {
-  opacity: 1;
-  transform: none;
-}
-
 .fade-in-right {
   transform: translateX(100%);
 }
 
-.fade-in-right.anim {
+.flip-down {
+  transform: rotateX(90deg);
+}
+
+.flip-up  {
+  transform: rotateX(90deg);
+}
+
+.anim {
   opacity: 1;
   transform: none;
 }

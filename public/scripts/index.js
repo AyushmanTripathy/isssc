@@ -5,10 +5,16 @@ const observer = new IntersectionObserver((entries) => {
   });
 });
 
-const names = ["fade-in", "fade-in-left", "fade-in-right"];
+const names = [
+  "fade-in",
+  "fade-in-left",
+  "fade-in-right",
+  "flip-up",
+  "flip-down",
+];
 names.forEach((name) => {
   document.querySelectorAll("." + name).forEach((x) => {
-    console.log(x)
-    observer.observe(x)
-  })
+    console.log(x);
+    observer.observe(x);
+  });
 });
