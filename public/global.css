@@ -13,49 +13,6 @@ img {
   width: 100vw;
 }
 
-.commitee {
-  text-align: left;
-  width: 85vw;
-  height: 0;
-  overflow-y: hidden;
-  transition: height 1s;
-
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  column-gap: 20px;
-}
-
-.commitee h3 {
-  text-align: left;
-  text-decoration: underline;
-  grid-column: 1/-1;
-}
-
-@media only screen and (max-width: 1600px) {
-  .commitee { 
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-@media only screen and (max-width: 1200px) {
-  .commitee {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-@media only screen and (max-width: 800px) {
-  .commitee {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media only screen and (max-width: 400px) {
-  .commitee {
-    grid-template-columns: repeat(1, 1fr);
-  }
-}
-
-.commitee-dropped {
-  height: auto;
-}
-
 .fade-in-left,
 .fade-in-right,
 .fade-in,
