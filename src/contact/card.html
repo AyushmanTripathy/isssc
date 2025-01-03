@@ -1,0 +1,34 @@
+<div>
+  <h2 class="fade-in-left">${name}</h2>
+  <p class="fade-in-right">
+    ${chair} Chair
+    <br />
+    ${designation}
+  </p>
+  <p class="fade-in-right">${uni}</p>
+  <p class="fade-in-left" href="mailto:${mail}">
+    <span>
+      <import path="../icons/mail.svg" fill="${pri}" type="svg" />
+    </span>
+    ${mail}
+  </p>
+  <p class="fade-in-left">
+    <span>
+      <import path="../icons/phone.svg" fill="${pri}" type="svg" />
+    </span>
+    ${phone}
+  </p>
+</div>
+
+<style>
+  a {
+    text-decoration: none;
+    color: $pri;
+  }
+  div {
+    padding: 20px;
+  }
+  h2 {
+    border-bottom: 1px solid $pri;
+  }
+</style>

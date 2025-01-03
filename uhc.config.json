@@ -7,12 +7,15 @@
   "css": {
     "autoprefix": true,
     "prefix": "@import \"./global.scss\";",
-    "sass": true 
+    "sass": true
   },
   "vars": {
+    "pri": "#030613",
+    "sec": "#fcffc1"
   },
   "routes": {
     "/": "index.html",
-    "/commitee": "commitee.html"
+    "/commitee": "commitee.html",
+    "/contact": "contact.html"
   }
 }
