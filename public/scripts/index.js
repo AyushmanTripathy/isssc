@@ -12,6 +12,7 @@ const names = [
   "flip-up",
   "flip-down",
 ];
+
 names.forEach((name) => {
   document.querySelectorAll("." + name).forEach((x) => {
     observer.observe(x);
